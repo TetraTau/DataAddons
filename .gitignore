@@ -117,7 +117,6 @@ out-plugins/
 
 # Common server run directory
 **/run/*
-!run/eula.txt
 
 # Avoid ignoring Gradle wrapper jar file (.jar files are usually ignored)
 !gradle-wrapper.jar

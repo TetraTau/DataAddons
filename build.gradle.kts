@@ -1,9 +1,7 @@
-import net.minecrell.pluginyml.bukkit.BukkitPluginDescription
-
 plugins {
     java
     id("xyz.jpenilla.run-paper") version "1.0.6"
-    id("net.minecrell.plugin-yml.bukkit") version "0.5.1"
+    id("net.minecrell.plugin-yml.bukkit") version "0.5.1" apply false
 }
 
 group = "io.xxr.dataaddon"
@@ -40,24 +38,18 @@ tasks {
     }
 }
 
-project(":paper-plugin") {
+subprojects {
     apply(plugin = "java")
     apply(plugin = "net.minecrell.plugin-yml.bukkit")
 
-    group = "io.xxr.dataaddon"
-    description = "Plugin for running and using"
-
     repositories {
+        mavenCentral()
         gradlePluginPortal()
         maven("https://papermc.io/repo/repository/maven-public/")
     }
 
     java {
         toolchain.languageVersion.set(JavaLanguageVersion.of(17))
-    }
-
-    dependencies {
-        compileOnly("io.papermc.paper:paper-api:1.18.2-R0.1-SNAPSHOT")
     }
 
     tasks {
@@ -70,22 +62,6 @@ project(":paper-plugin") {
         }
         processResources {
             filteringCharset = Charsets.UTF_8.name()
-        }
-    }
-
-    bukkit {
-        load = BukkitPluginDescription.PluginLoadOrder.STARTUP
-        name = "DataAddons"
-        version = rootProject.version.toString()
-        main = "io.xxr.dataaddon.DataAddonPlugin"
-        apiVersion = "1.18"
-        authors = listOf("Denery")
-
-        commands {
-            register("dataaddons") {
-                description = ""
-                usage = "\"/dataaddons version\" for version"
-            }
         }
     }
 }
