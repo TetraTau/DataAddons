@@ -5,16 +5,17 @@
 
 package dev.tablight.test;
 
-import dev.tablight.common.base.dataaddon.DataAddonBootstrap;
-import dev.tablight.common.base.dataaddon.annotation.group.GroupContainer;
-import dev.tablight.test.dummies.DataAddonDummy;
-import dev.tablight.test.registries.DummyTypeRegistry;
-import dev.tablight.common.base.dataaddon.typeregistry.DefaultTypeRegistry;
+import static org.junit.jupiter.api.Assertions.*;
+
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import dev.tablight.dataaddon.DataAddonBootstrap;
+import dev.tablight.dataaddon.annotation.group.GroupContainer;
+import dev.tablight.dataaddon.typeregistry.DefaultTypeRegistry;
+import dev.tablight.test.dummies.DataAddonDummy;
+import dev.tablight.test.registries.DummyTypeRegistry;
 
 class DefaultTypeRegistryTest {
 	DataAddonBootstrap dataAddonBootstrap = new DataAddonBootstrap();

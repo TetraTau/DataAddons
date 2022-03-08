@@ -4,7 +4,7 @@
  * file, You can obtain one at https://mozilla.org/MPL/2.0/.
  */
 
-package dev.tablight.common.base.dataaddon.holder;
+package dev.tablight.dataaddon.holder;
 
 import java.util.Collection;
 

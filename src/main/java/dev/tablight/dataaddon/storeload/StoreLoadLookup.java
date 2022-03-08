@@ -4,7 +4,7 @@
  * file, You can obtain one at https://mozilla.org/MPL/2.0/.
  */
 
-package dev.tablight.common.base.dataaddon.storeload;
+package dev.tablight.dataaddon.storeload;
 
 import java.util.Collection;
 import java.util.function.Supplier;

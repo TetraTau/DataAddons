@@ -4,7 +4,7 @@
  * file, You can obtain one at https://mozilla.org/MPL/2.0/.
  */
 
-package dev.tablight.common.base.dataaddon.annotation;
+package dev.tablight.dataaddon.annotation;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
@@ -12,8 +12,8 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 /**
- * Mark your method inside class marked with {@link DataAddon} to represent "custom" data storing in it.
+ * Mark your method inside class marked with {@link DataAddon} to represent "custom" data loading in it.
  */
 @Retention(RetentionPolicy.RUNTIME)
 @Target(ElementType.METHOD)
-public @interface Store {}
+public @interface Load {}

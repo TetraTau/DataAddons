@@ -5,8 +5,8 @@
 
 package dev.tablight.test.registries;
 
-import dev.tablight.common.base.dataaddon.annotation.group.Registry;
-import dev.tablight.common.base.dataaddon.typeregistry.DefaultTypeRegistry;
+import dev.tablight.dataaddon.annotation.group.Registry;
+import dev.tablight.dataaddon.typeregistry.DefaultTypeRegistry;
 
 @Registry("dummyGroup")
 public class DummyTypeRegistry extends DefaultTypeRegistry {}

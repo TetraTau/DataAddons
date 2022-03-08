@@ -5,12 +5,13 @@
 
 package dev.tablight.test.dummies;
 
-import com.google.common.collect.Lists;
-import dev.tablight.common.base.dataaddon.storeload.StoreLoadLookup;
-
 import java.util.Collection;
 import java.util.function.Supplier;
 import java.util.stream.Stream;
+
+import com.google.common.collect.Lists;
+
+import dev.tablight.dataaddon.storeload.StoreLoadLookup;
 
 public class DataAddonDummyLookup implements StoreLoadLookup<DataAddonDummy, DataAddonDummyLookup.NativeDummy> {
 

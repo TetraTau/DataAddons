@@ -4,12 +4,12 @@
  * file, You can obtain one at https://mozilla.org/MPL/2.0/.
  */
 
-package dev.tablight.common.base.dataaddon.storeload;
-
-import dev.tablight.common.base.dataaddon.annotation.DataAddon;
-import dev.tablight.common.base.dataaddon.holder.TypeHolder;
+package dev.tablight.dataaddon.storeload;
 
 import java.util.Collection;
+
+import dev.tablight.dataaddon.annotation.DataAddon;
+import dev.tablight.dataaddon.holder.TypeHolder;
 
 /**
  * Controller of "store load" mechanism of {@link DataAddon} instances.

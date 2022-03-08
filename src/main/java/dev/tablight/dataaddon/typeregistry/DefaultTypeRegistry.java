@@ -4,17 +4,18 @@
  * file, You can obtain one at https://mozilla.org/MPL/2.0/.
  */
 
-package dev.tablight.common.base.dataaddon.typeregistry;
-
-import com.google.common.collect.BiMap;
-import com.google.common.collect.HashBiMap;
-import dev.tablight.common.base.dataaddon.RegistryException;
-import dev.tablight.common.base.dataaddon.annotation.AnnotationUtil;
-import dev.tablight.common.base.dataaddon.annotation.DataAddon;
-import dev.tablight.common.base.dataaddon.holder.TypeHolder;
+package dev.tablight.dataaddon.typeregistry;
 
 import java.util.ArrayList;
 import java.util.Collection;
+
+import com.google.common.collect.BiMap;
+import com.google.common.collect.HashBiMap;
+
+import dev.tablight.dataaddon.RegistryException;
+import dev.tablight.dataaddon.annotation.AnnotationUtil;
+import dev.tablight.dataaddon.annotation.DataAddon;
+import dev.tablight.dataaddon.holder.TypeHolder;
 
 public class DefaultTypeRegistry extends TypeRegistry {
 	protected final Collection<TypeHolder> holders = new ArrayList<>();

@@ -5,24 +5,25 @@
 
 package dev.tablight.test;
 
-import dev.tablight.common.base.dataaddon.DataAddonBootstrap;
-import dev.tablight.common.base.dataaddon.typeregistry.TypeRegistry;
-import dev.tablight.common.base.dataaddon.annotation.group.GroupContainer;
-import dev.tablight.common.base.dataaddon.holder.ConcurrentTypeHolder;
-import dev.tablight.test.registries.DummyHolder;
-import dev.tablight.test.registries.DummyTypeRegistry;
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
-import dev.tablight.test.dummies.DataAddonDummy;
+import static org.junit.jupiter.api.Assertions.*;
 
 import java.util.List;
 
-import static org.junit.jupiter.api.Assertions.*;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
-class ConcurrentTypeHolderTest {
+import dev.tablight.dataaddon.DataAddonBootstrap;
+import dev.tablight.dataaddon.annotation.group.GroupContainer;
+import dev.tablight.dataaddon.holder.eventsourcing.ConcurrentEventTypeHolder;
+import dev.tablight.dataaddon.typeregistry.TypeRegistry;
+import dev.tablight.test.dummies.DataAddonDummy;
+import dev.tablight.test.registries.DummyHolder;
+import dev.tablight.test.registries.DummyTypeRegistry;
+
+class TypeHolderTest {
 	DataAddonBootstrap dataAddonBootstrap = new DataAddonBootstrap();
-	ConcurrentTypeHolder holder;
+	ConcurrentEventTypeHolder holder;
 	TypeRegistry typeRegistry;
 
 	@BeforeEach

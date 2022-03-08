@@ -4,9 +4,9 @@
  * file, You can obtain one at https://mozilla.org/MPL/2.0/.
  */
 
-package dev.tablight.common.base.dataaddon;
+package dev.tablight.dataaddon;
 
-import dev.tablight.common.base.dataaddon.annotation.group.GroupContainer;
+import dev.tablight.dataaddon.annotation.group.GroupContainer;
 
 /**
  * Global group container for integration of multiple projects which use this library.

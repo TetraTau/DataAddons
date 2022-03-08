@@ -4,18 +4,18 @@
  * file, You can obtain one at https://mozilla.org/MPL/2.0/.
  */
 
-package dev.tablight.common.base.dataaddon.annotation;
-
-import dev.tablight.common.base.dataaddon.DataAddonBootstrap;
-import dev.tablight.common.base.dataaddon.typeregistry.TypeRegistry;
-import dev.tablight.common.base.dataaddon.holder.TypeHolder;
-import dev.tablight.common.base.dataaddon.storeload.StoreLoadLookup;
-import dev.tablight.common.base.dataaddon.storeload.StoreLoadController;
+package dev.tablight.dataaddon.annotation;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
+
+import dev.tablight.dataaddon.DataAddonBootstrap;
+import dev.tablight.dataaddon.holder.TypeHolder;
+import dev.tablight.dataaddon.storeload.StoreLoadController;
+import dev.tablight.dataaddon.storeload.StoreLoadLookup;
+import dev.tablight.dataaddon.typeregistry.TypeRegistry;
 
 /**
  * Mark your class with this annotation if it represents object with additional data over some other object data

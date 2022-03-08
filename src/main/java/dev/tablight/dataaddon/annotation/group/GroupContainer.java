@@ -4,32 +4,21 @@
  * file, You can obtain one at https://mozilla.org/MPL/2.0/.
  */
 
-/*
- * This Source Code Form is subject to the terms of the Mozilla Public
- * License, v. 2.0. If a copy of the MPL was not distributed with this
- * file, You can obtain one at https://mozilla.org/MPL/2.0/.
- */
+package dev.tablight.dataaddon.annotation.group;
 
-/*
- * This Source Code Form is subject to the terms of the Mozilla Public
- * License, v. 2.0. If a copy of the MPL was not distributed with this
- * file, You can obtain one at https://mozilla.org/MPL/2.0/.
- */
-
-package dev.tablight.common.base.dataaddon.annotation.group;
-
-
-import com.google.common.collect.BiMap;
-import com.google.common.collect.HashBiMap;
-import dev.tablight.common.base.dataaddon.*;
-import dev.tablight.common.base.dataaddon.holder.TypeHolder;
-import dev.tablight.common.base.dataaddon.RegistryException;
-import dev.tablight.common.base.dataaddon.typeregistry.TypeRegistry;
-import dev.tablight.common.base.dataaddon.annotation.DataAddon;
-import dev.tablight.common.base.dataaddon.storeload.StoreLoadController;
 
 import java.util.HashMap;
 import java.util.Map;
+
+import com.google.common.collect.BiMap;
+import com.google.common.collect.HashBiMap;
+
+import dev.tablight.dataaddon.DataAddonBootstrap;
+import dev.tablight.dataaddon.RegistryException;
+import dev.tablight.dataaddon.annotation.DataAddon;
+import dev.tablight.dataaddon.holder.TypeHolder;
+import dev.tablight.dataaddon.storeload.StoreLoadController;
+import dev.tablight.dataaddon.typeregistry.TypeRegistry;
 
 /**
  * Container containing group tags and classes with their instances, it is needed only for {@link DataAddonBootstrap}

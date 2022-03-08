@@ -4,13 +4,14 @@
  * file, You can obtain one at https://mozilla.org/MPL/2.0/.
  */
 
-package dev.tablight.common.base.dataaddon.holder;
-
-import com.lmax.disruptor.EventHandler;
-import dev.tablight.common.base.dataaddon.typeregistry.TypeRegistry;
-import dev.tablight.common.base.dataaddon.annotation.DataAddon;
+package dev.tablight.dataaddon.holder;
 
 import java.util.Collection;
+
+import com.lmax.disruptor.EventHandler;
+
+import dev.tablight.dataaddon.annotation.DataAddon;
+import dev.tablight.dataaddon.typeregistry.TypeRegistry;
 
 /**
  * Class "holding" instances of {@link TypeRegistry},

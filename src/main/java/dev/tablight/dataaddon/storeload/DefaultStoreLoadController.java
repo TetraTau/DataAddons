@@ -4,15 +4,15 @@
  * file, You can obtain one at https://mozilla.org/MPL/2.0/.
  */
 
-package dev.tablight.common.base.dataaddon.storeload;
-
-import dev.tablight.common.base.dataaddon.RegistryException;
-import dev.tablight.common.base.dataaddon.annotation.AnnotationUtil;
-import dev.tablight.common.base.dataaddon.annotation.DataAddon;
-import dev.tablight.common.base.dataaddon.holder.TypeHolder;
+package dev.tablight.dataaddon.storeload;
 
 import java.util.ArrayList;
 import java.util.Collection;
+
+import dev.tablight.dataaddon.RegistryException;
+import dev.tablight.dataaddon.annotation.AnnotationUtil;
+import dev.tablight.dataaddon.annotation.DataAddon;
+import dev.tablight.dataaddon.holder.TypeHolder;
 
 public class DefaultStoreLoadController extends StoreLoadController {
 	protected final Collection<TypeHolder> holders = new ArrayList<>();

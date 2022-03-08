@@ -5,9 +5,9 @@
 
 package dev.tablight.test.dummies;
 
-import dev.tablight.common.base.dataaddon.annotation.DataAddon;
-import dev.tablight.common.base.dataaddon.annotation.Load;
-import dev.tablight.common.base.dataaddon.annotation.Store;
+import dev.tablight.dataaddon.annotation.DataAddon;
+import dev.tablight.dataaddon.annotation.Load;
+import dev.tablight.dataaddon.annotation.Store;
 
 @DataAddon(
 		identifier = "dummy",

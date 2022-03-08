@@ -4,22 +4,23 @@
  * file, You can obtain one at https://mozilla.org/MPL/2.0/.
  */
 
-package dev.tablight.common.base.dataaddon;
-
-import com.google.common.reflect.ClassPath;
-import dev.tablight.common.base.dataaddon.annotation.AnnotationUtil;
-import dev.tablight.common.base.dataaddon.annotation.group.Controller;
-import dev.tablight.common.base.dataaddon.annotation.group.GroupContainer;
-import dev.tablight.common.base.dataaddon.annotation.group.Holder;
-import dev.tablight.common.base.dataaddon.annotation.group.Registry;
-import dev.tablight.common.base.dataaddon.holder.TypeHolder;
-import dev.tablight.common.base.dataaddon.annotation.DataAddon;
-import dev.tablight.common.base.dataaddon.storeload.StoreLoadController;
-import dev.tablight.common.base.dataaddon.typeregistry.TypeRegistry;
+package dev.tablight.dataaddon;
 
 import java.io.IOException;
 import java.util.List;
 import java.util.function.Consumer;
+
+import com.google.common.reflect.ClassPath;
+
+import dev.tablight.dataaddon.annotation.AnnotationUtil;
+import dev.tablight.dataaddon.annotation.DataAddon;
+import dev.tablight.dataaddon.annotation.group.Controller;
+import dev.tablight.dataaddon.annotation.group.GroupContainer;
+import dev.tablight.dataaddon.annotation.group.Holder;
+import dev.tablight.dataaddon.annotation.group.Registry;
+import dev.tablight.dataaddon.holder.TypeHolder;
+import dev.tablight.dataaddon.storeload.StoreLoadController;
+import dev.tablight.dataaddon.typeregistry.TypeRegistry;
 
 public final class DataAddonBootstrap {
 	private GroupContainer container;
@@ -41,7 +42,7 @@ public final class DataAddonBootstrap {
 			List<? extends Class<?>> classesInPackage = ClassPath.from(ClassLoader.getSystemClassLoader())
 					.getAllClasses()
 					.stream()
-					.filter(clazz -> clazz.getPackageName().contains(packageName))
+					.filter(clazz -> clazz.getPackageName().startsWith(packageName))
 					.map(ClassPath.ClassInfo::load)
 					.toList();
 
@@ -91,7 +92,7 @@ public final class DataAddonBootstrap {
 			List<? extends Class<?>> implClasses = ClassPath.from(ClassLoader.getSystemClassLoader())
 					.getAllClasses()
 					.stream()
-					.filter(clazz -> clazz.getPackageName().contains(packageName))
+					.filter(clazz -> clazz.getPackageName().startsWith(packageName))
 					.map(ClassPath.ClassInfo::load)
 					.filter(clazz -> clazz.isAnnotationPresent(DataAddon.class))
 					.toList();
@@ -113,8 +114,8 @@ public final class DataAddonBootstrap {
 		return (T) container.data.get(clazz);
 	}
 
-	public <T> String getIdentifier(Class<T> clazz) {
+	public <T> DataAddon getDataAddonInfo(Class<T> clazz) {
 		if (!container.implementations.values().contains(clazz)) throw new RegistryException("This DataAddon doesn't registered in this bootstrap!");
-		return clazz.getAnnotation(DataAddon.class).identifier();
+		return clazz.getAnnotation(DataAddon.class);
 	}
 }

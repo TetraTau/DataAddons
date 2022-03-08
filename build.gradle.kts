@@ -5,7 +5,7 @@ plugins {
 }
 
 group = "io.xxr.dataaddon"
-version = "b1.0"
+version = "b1.1"
 
 repositories {
     mavenCentral()

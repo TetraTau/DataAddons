@@ -4,12 +4,12 @@
  * file, You can obtain one at https://mozilla.org/MPL/2.0/.
  */
 
-package dev.tablight.common.base.dataaddon.typeregistry;
-
-import dev.tablight.common.base.dataaddon.holder.TypeHolder;
-import dev.tablight.common.base.dataaddon.annotation.DataAddon;
+package dev.tablight.dataaddon.typeregistry;
 
 import java.util.Collection;
+
+import dev.tablight.dataaddon.annotation.DataAddon;
+import dev.tablight.dataaddon.holder.TypeHolder;
 
 /**
  * Registry containing Unique DataAddon types where you can register and instantiate "custom" types.

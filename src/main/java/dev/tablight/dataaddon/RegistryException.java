@@ -4,7 +4,7 @@
  * file, You can obtain one at https://mozilla.org/MPL/2.0/.
  */
 
-package dev.tablight.common.base.dataaddon;
+package dev.tablight.dataaddon;
 
 public final class RegistryException extends RuntimeException {
 	private static final String WENT_WRONG = "Something went wrong while registering type: ";

@@ -4,10 +4,7 @@
  * file, You can obtain one at https://mozilla.org/MPL/2.0/.
  */
 
-package dev.tablight.common.base.dataaddon.annotation.group;
-
-import dev.tablight.common.base.dataaddon.DataAddonBootstrap;
-import dev.tablight.common.base.dataaddon.typeregistry.TypeRegistry;
+package dev.tablight.dataaddon.annotation.group;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
@@ -15,12 +12,12 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 /**
- * Mark your class extending {@link TypeRegistry} to use it with other infrastructure
- * @see DataAddonBootstrap
+ * Mark your class extending {@link dev.tablight.common.base.dataaddon.storeload.StoreLoadController} to use it other infrastructure. 
+ * @see dev.tablight.common.base.dataaddon.DataAddonBootstrap
  */
 @Retention(RetentionPolicy.RUNTIME)
 @Target(ElementType.TYPE)
-public @interface Registry {
+public @interface Controller {
 	/**
 	 * @return Unique group tag, needs to mark relation between all other infrastructure.
 	 */
