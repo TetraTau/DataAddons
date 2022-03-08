@@ -2,7 +2,7 @@
 ## This library is an open-source component of TabLight project "Base-API"
 ### Have a question or want to discuss this library? Join [our discord server](https://discord.gg/upTtNyvkNf)
 DataAddons is a library (or framework?) created for Minecraft providing comfortable abstractions making additions over already existing data, generally, **it is anti-pattern** ans **YOU SHOULDN'T USE IT** in normal programms. \
-So why is it needed? It is needed for loading, storing, registering and processing of *data addons* and composing them out of different "sources" of data. \
+So why is it needed? It is needed for loading, storing, registering and processing of *data addons* and composing them out of different "sources" of data.
 ### Downloading
 For now this library has no public repository artifact, so the only way you can use it is via jar.
 ```kotlin
@@ -26,7 +26,7 @@ Usually native data serializes when Minecraft server stops, so every developer w
     * Mark "custom" data generated from "native" while server running with "tag" which saves along with native data. (generally - NBT tag)
     * Save "custom" data to its storage. (DBs, serialization etc.)
 
-As you probably noticed "these objects" which we construct, hold, process and store are *data addons*. \
+As you probably noticed "these objects" which we construct, hold, process and store are *data addons*.
 
 ### Quick Start.
 In your JavaPlugin class make bootstrap.
@@ -69,7 +69,7 @@ public class ExampleController extends DefaultStoreLoadController {
 }
 ```
 Note that for proper connection these classes should have the same "group tag".
-And You can override their methods to define your own behaviour for "pre-processing" and "post-processing". \
+And You can override their methods to define your own behaviour for "pre-processing" and "post-processing".
 
 What is `com.example.addons`? 
 It is our data addons classes, we use them in "registries". You should define data addon class as:
