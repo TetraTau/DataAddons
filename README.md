@@ -1,5 +1,5 @@
 # DataAddons
-## This library is an open-source component of TabLight project "Base-API"
+## This library is currently maintained at the [TokyLib](https://github.com/maestro-denery/TokyLib) repository as a subproject, please check it if you want a maintained version!
 ### Have a question or want to discuss this library? Join [our discord server](https://discord.gg/upTtNyvkNf)
 DataAddons is a library (or framework?) created for Minecraft providing comfortable abstractions making additions over already existing data, generally, **it is anti-pattern** ans **YOU SHOULDN'T USE IT** in normal programms. \
 So why is it needed? It is needed for loading, storing, registering and processing of *data addons* and composing them out of different "sources" of data.
